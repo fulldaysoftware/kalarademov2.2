@@ -31,6 +31,7 @@ const DsiplayForm=({formState})=>{
     // { value: 'Sentence', key: 5 },
     // { value: 'Star Rating', key: 6 },
          const attributes = store.getState().form.map((item) => {
+            console.log("the dataaaaaaaaaaaaa", item.options);
             return {
                 title: item.question,
                 default: item.default,
@@ -48,10 +49,10 @@ const DsiplayForm=({formState})=>{
                 }(),
                 required: item.required,
                 options: function(){
-                if(item.options) {
+                if(!Array.isArray(item.options) && (typeof item.options === "string") ) {
                     return item.options.split(",")
                 }
-                return null
+                return item.options
                 }() // Assuming options is defined elsewhere
             };
             });
