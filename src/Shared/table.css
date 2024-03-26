@@ -1,0 +1,64 @@
+/* CSS for the ReviewsTable component */
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styling */
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Table cell styling */
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Alternating row background color */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Highlighted background color for header row */
+thead th {
+  background-color: #333;
+}
+
+/* Text color for table header */
+th {
+  color: white;
+}
+
+/* Styling for the first column (Author Name) */
+td:first-child {
+  font-weight: bold;
+}
+
+/* Styling for the Rating column */
+td:nth-child(2) {
+  text-align: center;
+}
+
+/* Styling for the Environment, Food, and Service columns */
+td:nth-child(n+3) {
+  font-style: italic;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 600px) {
+  th, td {
+    padding: 5px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,82 @@
+/* ImageCarousel.css */
+
+.image-carousel {
+  position: relative;
+  width: 500px; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: black; /* Set the background color to black */
+  display: flex;
+  align-items: center; /* Centers content vertically */
+}
+
+.image-carousel.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-carousel img {
+  width: 100%; /* Stretch to full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures image covers entire height */
+}
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px; /* Adjust as needed */
+}
+
+.next-button {
+  right: 10px; /* Adjust as needed */
+}
+
+.fullscreen-button {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background-color: #333;
+}
